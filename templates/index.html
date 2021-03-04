@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% block title %}
+<title>home</title>
+{% endblock %}
+   {% block links %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css')}}">
+   {% endblock %}
+     <link rel="stylesheet" href="welcome.css">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+     <script src="welcome.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+ 
+ <nav class="na">
+      <a href="#"><h3>Gift shop management</h3></a>
+      <ul type="none">
+				<li><a href={{url_for('index')}}>Home</a></li>
+				<li><a href={{url_for('smlogin')}}>Shop Manager Login</a></li>
+				<li><a href={{url_for('sologin')}}>Shop Owner Login</a></li>
+				<li><a href={{url_for('custlogin')}}>Customer Login</a></li>
+				<li><a href={{url_for('custregister')}}>Customer Register</a></li>
+      </ul>
+    </nav>
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

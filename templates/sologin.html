@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block title %}
+	 <title>ownerlogin</title>
+	{% endblock %}
+	{% block links %}
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/sologin.css')}}">
+	{% endblock %}
+
+</head>
+<body>
+   {% block content %}
+	<div class="login-form">
+      <form action="#" method="POST">
+        <h2 style="font-weight: bold; color: #333">Owner Login</h2>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            required="required"
+            name="owneremail"
+          />
+          <span id="span1"></span>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="phonenumber"
+            name="ownerphonenumber"
+          />
+          <span id="span1"></span>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            required="required"
+            name="ownerpassword"
+          />
+        </div>
+        
+        <div class="form-group">
+          <button type="submit" class="btn btn-danger btn-lg">Login</button>
+        </div>
+      </form>
+    </div>
+{% endblock %}
+ 
+ 
+</body>
+</html>

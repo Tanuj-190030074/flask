@@ -1,0 +1,70 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+  {% block title %}
+  <title>customerregister</title>
+  {% endblock %}
+  {% block links %}
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/custregister.css')}}">
+  <script type="text/javascript" src="{{url_for('static',filename='js/custregister.js')}}"></script>
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+  <div class="adddetails">
+        <form action="#">
+          <h2 style="font-weight: bold; color: #333">Customer details</h2>
+          <div class="form-group">
+                <label>Enter firstname:</label>
+                <input type="text" class="form-control" placeholder="First Name" name="cname" required/>
+          </div>
+          <div class="form-group">
+             <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male">
+             <label class="form-check-label" for="inlineRadio1">Male</label>
+             <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="female" style="margin-left: 30px;">
+             <label class="form-check-label" for="inlineRadio1">Female</label>
+          </div>
+          <div class="form-group">
+            <label>Enter email:</label>
+            <input class="form-control" type="cemail" required  placeholder="enter email">
+          </div>
+          <div class="form-group">
+            <label>Enter phonenumber:</label>
+            <input class="form-control" type="text" maxlength="10" placeholder="enter phonenumber" name="cphonenumber" required>
+          </div>
+          <div class="form-group">
+            <label>Enter Location:</label>
+            <input class="form-control" type="text" placeholder="Enter Street" name="clocation" required>
+          </div>
+          <div class="form-group">
+            <label>Enter Password:</label>
+          <input
+            type="password"
+            onblur="veripass1()"
+            class="form-control"
+            id="2"
+            placeholder="Password"
+            required="required"
+            name="password"
+          />
+          <span id="span2"></span>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            onblur="VerifyPass()"
+            id="3"
+            placeholder="Confirm Password"
+            required="required"
+          />
+          <span id="span3"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      {% endblock %}
+  }
+</body>
+</html>

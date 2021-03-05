@@ -1,3 +1,8 @@
+.x{
+  height: 1000px;
+  width: 100%;
+}
+
 .na{
   background-color: black;
   display: flex;
